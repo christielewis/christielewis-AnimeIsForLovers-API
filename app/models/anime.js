@@ -5,20 +5,16 @@ const animeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  platform: {
-    type: String,
-    required: true
-  },
   description: {
     type: String,
     required: true
   },
-  // comment: String,
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
   }
+  // comment: [commentSchema]
 }, {
   timestamps: true
 })

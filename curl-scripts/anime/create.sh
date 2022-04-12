@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# TITLE="" DESCRIPTION="" OWNER="" TOKEN=""
+
 API="http://localhost:4741"
-URL_PATH="/examples"
+URL_PATH="/anime"
 
 curl "${API}${URL_PATH}" \
   --include \
@@ -9,9 +11,10 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "example": {
-      "text": "'"${TEXT}"'",
-      "title": "'"${TITLE}"'"
+    "anime": {
+      "title": "'"${TITLE}"'",
+      "description": "'"${DESCRIPTION}"'",
+      "owner": "'"${OWNER}"'"
     }
   }'
 
