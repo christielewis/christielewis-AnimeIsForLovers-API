@@ -9,6 +9,14 @@ const animeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  season: {
+    type: Number,
+    required: true
+  },
+  episode: {
+    type: Number,
+    required: true
+  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
